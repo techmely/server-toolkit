@@ -1,0 +1,62 @@
+{
+  "name": "@techmely/server-toolkit",
+  "description": "Es toolkit for server side - Help you build production more easier and faster!",
+  "version": "0.1.1",
+  "private": false,
+  "license": "MIT",
+  "homepage": "https://techmely.com/libraries/head",
+  "bugs": {
+    "url": "https://github.com/techmely/server-toolkit/issues"
+  },
+  "repository": {
+    "url": "git+https://github.com/techmely/server-toolkit.git#main"
+  },
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "lint.format": "bunx @biomejs/biome check --write .",
+    "clean": "rm -f dist node_modules",
+    "test.unit": "vitest --passWithNoTests",
+    "test.unit.run": "NODE_ENV=test vitest run --passWithNoTests --isolate",
+    "test.unit.coverage": "vitest --coverage",
+    "build": "cross-env NODE_ENV=production bun run ./build.ts",
+    "release": "bun run ./release.ts",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@changesets/changelog-github": "0.5.0",
+    "@changesets/cli": "2.27.7",
+    "@techmely/types": "1.9.0",
+    "@types/bun": "1.1.6",
+    "@types/node": "20.14.10",
+    "cross-env": "7.0.3",
+    "husky": "9.0.11",
+    "npm-check-updates": "16.14.20",
+    "@vitest/coverage-v8": "2.0.2",
+    "bun": "1.1.18",
+    "typescript": "5.5.3",
+    "vitest": "2.0.2",
+    "zx": "8.1.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/techmely"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/techmely"
+    }
+  ],
+  "keywords": [
+    "techmely",
+    "server toolkit"
+  ]
+}
